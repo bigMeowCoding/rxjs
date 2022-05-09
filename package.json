@@ -1,0 +1,8 @@
+{
+  "name": "rxjs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:bigMeowCoding/rxjs.git",
+  "author": "zhouyijun <zhou495248579@hotmail.com>",
+  "license": "MIT"
+}
