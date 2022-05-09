@@ -4,5 +4,26 @@
   "main": "index.js",
   "repository": "git@github.com:bigMeowCoding/rxjs.git",
   "author": "zhouyijun <zhou495248579@hotmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "build:dev": "cross-env NODE_ENV=develop npx gulp",
+    "build:prod": "cross-env NODE_ENV=production npx gulp"
+  },
+  "devDependencies": {
+    "@types/gulp": "^4.0.9",
+    "@types/webpack-stream": "^3.2.12",
+    "cross-env": "^7.0.3",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-cli": "^2.3.0",
+    "gulp-replace": "^1.1.3",
+    "prettier": "^2.6.2",
+    "ts-node": "^10.7.0",
+    "webpack": "^5.72.0",
+    "webpack-stream": "^7.0.0"
+  },
+  "dependencies": {
+    "typescript": "^4.6.4"
+  }
 }
