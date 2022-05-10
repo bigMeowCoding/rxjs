@@ -2,7 +2,7 @@ import gulp, { dest, series, src } from "gulp";
 import del from "del";
 
 import webpack from "webpack-stream";
-
+import webpackBaseConfig from "./webpack.config";
 // const gulp = require("gulp");
 // const webpack = require("gulp-webpack");
 // const version = require("./package.json").version;
@@ -15,13 +15,14 @@ const path = {
   js: "src/**/*.js",
 };
 const webpackConfig = {
+  ...webpackBaseConfig,
   entry: "./src/index.js",
   mode,
   output: {
     path: __dirname + "/" + output,
     filename: "rxjs.js",
   },
-};
+} as any;
 gulp.task("clean", () => {
   return del(output);
 });
@@ -54,4 +55,4 @@ gulp.task("compile", () => {
 // gulp.task("serve", ["clean"], function () {
 //     gulp.start("connect");
 // });
-gulp.task("default", series("clean",'script'));
+gulp.task("default", series("clean", "script"));
